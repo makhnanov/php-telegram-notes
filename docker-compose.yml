@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+
+  php-telegram-notes-fpm:
+    build:
+      dockerfile: ./Docker/fpm/Dockerfile
+      context: .
+    volumes:
+      - .:/app
+    working_dir: /app
+
+  telegram-notes-nginx:
+    build:
+      dockerfile: ./Docker/nginx/Dockerfile
+      context: .
+    ports:
+      - "8080:80"
+
+  telegram-notes-workspace:
+    build:
+      dockerfile: ./Docker/workspace/Dockerfile
+      context: .
+    volumes:
+      - .:/app
+
+  telegram-notes-mongo:
+    image: mongo:latest

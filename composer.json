@@ -1,0 +1,27 @@
+{
+    "name": "makhnanov/php-telegram-notes",
+    "description": "Telegram notes written in PHP 8.1",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Bakirov Roman",
+            "email": "bakirov.important@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "makhnanov/php-telegram-bot-81": "dev-master",
+        "vlucas/phpdotenv": "5.4.x-dev",
+        "mongodb/mongodb": "1.11.x-dev",
+        "ext-mongodb": "*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "6.1.x-dev"
+    }
+}
